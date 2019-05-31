@@ -17,32 +17,34 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python=3.6
     - numpy>=1.14
     - pip
     - setuptools
     - cython
-    
+
   run:
     - python=3.6
-    - keras=2.1.5 
-    - opencv 
-    - tensorflow 
+    - keras=2.1.5
+    - opencv
+    - tensorflow
     - numpy>=1.14
-    - matplotlib 
+    - matplotlib
     - hdf5
-    - pytables 
-    - pandas 
+    - pytables
+    - pandas
     - pyqt
-    - scipy 
-    - scikit-learn 
+    - scipy
+    - scikit-learn
     - scikit-image
-    - statsmodels 
+    - statsmodels
     - numba
     - tqdm
     - requests
     - ffmpeg
-    
+
 test:
   imports:
     - tierpsy
