@@ -12,14 +12,13 @@ source:
 
 build:
   osx_is_app: True
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py37]
 
 requirements:
   build:
     - python=3.6
-    - numpy >=1.14
+    - numpy>=1.14
     - pip
     - setuptools
     - gcc
@@ -30,7 +29,7 @@ requirements:
     - keras=2.1.5 
     - opencv 
     - tensorflow 
-    - numpy >=1.14
+    - numpy>=1.14
     - matplotlib 
     - hdf5
     - pytables 
