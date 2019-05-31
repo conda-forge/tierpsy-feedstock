@@ -6,44 +6,48 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ver228/tierpsy-tracker/archive/v1.5.1.tar.gz
+  url: https://github.com/ver228/tierpsy-tracker/archive/v{{ version }}.tar.gz
   sha256: 78cf8cf9a9ca694cbab6d4bac244567864150d7044be312ccdf0396684f9ce82
   #git_url: https://github.com/ver228/tierpsy-tracker.git
 
 build:
   osx_is_app: True
-  number: 0
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py<36]
 
 requirements:
   build:
-    - python
-    - numpy >=1.14
+    - {{ compiler('c') }}
+  host:
+    - {{ compiler('c') }}
+    
+  host:
+    - python=3.6
+    - numpy>=1.16
     - pip
     - setuptools
     - cython
-    
+
   run:
-    - python
-    - keras=2.1.5 
-    - opencv 
-    - tensorflow 
-    - numpy >=1.14
-    - matplotlib 
+    - python=3.6
+    - keras=2.1.5
+    - opencv
+    - tensorflow
+    - numpy>=1.16
+    - matplotlib
     - hdf5
-    - pytables 
-    - pandas 
+    - pytables
+    - pandas
     - pyqt
-    - scipy 
-    - scikit-learn 
+    - scipy
+    - scikit-learn
     - scikit-image
-    - statsmodels 
+    - statsmodels
     - numba
     - tqdm
     - requests
     - ffmpeg
-    
+
 test:
   imports:
     - tierpsy
