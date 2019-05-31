@@ -21,7 +21,6 @@ requirements:
     - numpy>=1.14
     - pip
     - setuptools
-    - gcc
     - cython
     
   run:
