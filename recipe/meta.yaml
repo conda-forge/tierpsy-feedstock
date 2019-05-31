@@ -16,8 +16,12 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - {{ compiler('c') }}
+    
+  host:
     - python=3.6
     - numpy>=1.16
     - pip
@@ -25,12 +29,11 @@ requirements:
     - cython
 
   run:
-    - {{ compiler('c') }}
-    - {{ pin_compatible('numpy') }}
     - python=3.6
     - keras=2.1.5
     - opencv
     - tensorflow
+    - numpy>=1.16
     - matplotlib
     - hdf5
     - pytables
