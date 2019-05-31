@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ver228/tierpsy-tracker/archive/v1.5.1.tar.gz
+  url: https://github.com/ver228/tierpsy-tracker/archive/v{{ version }}.tar.gz
   sha256: 78cf8cf9a9ca694cbab6d4bac244567864150d7044be312ccdf0396684f9ce82
   #git_url: https://github.com/ver228/tierpsy-tracker.git
 
