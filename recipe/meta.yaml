@@ -12,20 +12,21 @@ source:
 
 build:
   osx_is_app: True
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py<36]
+  skip: True  # [py37]
 
 requirements:
   build:
-    - python
+    - python=3.6
     - numpy >=1.14
     - pip
     - setuptools
+    - gcc
     - cython
     
   run:
-    - python
+    - python=3.6
     - keras=2.1.5 
     - opencv 
     - tensorflow 
