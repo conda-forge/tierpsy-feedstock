@@ -12,7 +12,7 @@ source:
 
 build:
   osx_is_app: True
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -34,7 +34,7 @@ requirements:
     - opencv
     - tensorflow
     - numpy>=1.16
-    - matplotlib
+    - matplotlib-base
     - hdf5
     - pytables
     - pandas
