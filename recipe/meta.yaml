@@ -12,7 +12,7 @@ source:
 
 build:
   osx_is_app: True
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     
   host:
     - python=3.6
